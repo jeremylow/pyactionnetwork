@@ -15,7 +15,7 @@ All contributors agree to abide by the [Philadelphia DSA Code of Conduct](https:
 There are additional requirements that can be installed by:
 
 ```bash
-pip install -r requirements/testing.txt
+pip install -r requirements/dev.txt
 ```
 
 To run tests:
