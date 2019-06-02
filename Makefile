@@ -18,7 +18,9 @@ test:
 	coverage html
 
 install:
+	pip install -Ur requirements/requirements.txt
 	pip install -Ur requirements/testing.txt
+	pip install -Ur requirements/local.txt
 
 build: clean
 	python setup.py sdist
@@ -27,5 +29,5 @@ build: clean
 distribute: build
 	twine upload dist/* -r pypi
 
-ci: clean info test
+ci: clean test
 	codecov
