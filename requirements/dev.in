@@ -9,3 +9,5 @@ pycodestyle
 codecov
 wheel
 freezegun
+pylint
+black
