@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "pyactionnetwork"
+version = "0.11.2"
+description = "Python wrapper for ActionNetwork"
+authors = ["Jeremy Low <jeremylow@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+httpx = "^0.18.1"
+python-dateutil = "^2.8.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.3"
+hypothesis = "^6.10.1"
+coverage = "^5.5"
+pytest-cov = "^2.11.1"
+responses = "^0.13.3"
+pycodestyle = "^2.7.0"
+codecov = "^2.1.11"
+freezegun = "^1.1.0"
+pylint = "^2.8.2"
+black = "^21.4b2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
