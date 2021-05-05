@@ -1,12 +1,19 @@
-version: 2.0
+version: 2
 
 jobs:
-    build:
-        docker:
-            - image: python:3.6.4
-        steps:
-            - checkout
-            - run:
-                command: |
-                    pip install -r requirements/testing.txt
-                    make ci
+  build:
+    docker:
+      - image: circleci/python:latest
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - deps-{{ checksum "poetry.lock" }}
+      - run:
+          name: install dependencies
+          command: |
+            poetry install
+      - save_cache:
+          key: deps-{{ checksum "poetry.lock" }}
+          paths:
+            - /home/circleci/.cache/pypoetry/virtualenvs
